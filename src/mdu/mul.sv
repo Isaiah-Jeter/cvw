@@ -27,6 +27,8 @@
 // and limitations under the License.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 module mul #(parameter XLEN) (
   input  logic                clk, reset,
   input  logic                StallM, FlushM,
@@ -35,51 +37,64 @@ module mul #(parameter XLEN) (
   output logic [XLEN*2-1:0]   ProdM                           // double-widthproduct
 );
 
-  // Number systems
-  // Let A' = sum(i=0, XLEN-2, A[i]*2^i)
-  // Unsigned: A = A' + A[XLEN-1]*2^(XLEN-1)
-  // Signed:   A = A' - A[XLEN-1]*2^(XLEN-1)
-
-  // Multiplication: A*B
-  // Let P' = A' * B'
-  //     PA = (A' * B[XLEN-1]) 
-  //     PB = (B' * A[XLEN-1])
-  //     PP = A[XLEN-1] * B[XLEN-1]
-  // Signed * Signed     = P' + (-PA - PB)*2^(XLEN-1) + PP*2^(2XLEN-2)
-  // Signed * Unsigned   = P' + ( PA - PB)*2^(XLEN-1) - PP*2^(2XLEN-2)
-  // Unsigned * Unsigned = P' + ( PA + PB)*2^(XLEN-1) + PP*2^(2XLEN-2)
-
-  logic [XLEN-1:0]    Aprime, Bprime;                       // lower bits of source A and B
-  logic               MULH, MULHSU;                         // type of multiply
-  logic [XLEN-2:0]    PA, PB;                               // product of msb and lsbs
-  logic               PP;                                   // product of msbs
-  logic [XLEN*2-1:0]  PP1E, PP2E, PP3E, PP4E;               // partial products
-  logic [XLEN*2-1:0]  PP1M, PP2M, PP3M, PP4M;               // registered partial proudcts
+    logic [XLEN*2-1:0]  PP1M, PP2M, PP3M, PP4M;               // registered partial proudcts
+    logic [XLEN*2-1:0]  PP1E, PP2E, PP3E, PP4E; 
+    logic [XLEN*2-3:0] Pprime;
+    logic [XLEN-2:0] Aprime, Bprime, PA, PB;
+    logic Am, Bm, PM;
+    
  
   //////////////////////////////
   // Execute Stage: Compute partial products
   //////////////////////////////
+  assign Am = ForwardedSrcAE[XLEN-1];
+  assign Bm = ForwardedSrcBE[XLEN-1];
+  assign Aprime = ForwardedSrcAE[XLEN-2:0]; //correct & tested
+  assign Bprime = ForwardedSrcBE[XLEN-2:0]; //correct & tested
+  
 
-  assign Aprime = {1'b0, ForwardedSrcAE[XLEN-2:0]};
-  assign Bprime = {1'b0, ForwardedSrcBE[XLEN-2:0]};
-  assign PP1E = Aprime * Bprime;
-  assign PA = {(XLEN-1){ForwardedSrcAE[XLEN-1]}} & ForwardedSrcBE[XLEN-2:0];  
-  assign PB = {(XLEN-1){ForwardedSrcBE[XLEN-1]}} & ForwardedSrcAE[XLEN-2:0];
-  assign PP = ForwardedSrcAE[XLEN-1] & ForwardedSrcBE[XLEN-1];
+  assign Pprime = Aprime * Bprime; //correct & tested
+  assign PA = {(XLEN-1){Am}} & Bprime;
+  assign PB = {(XLEN-1){Bm}} & Aprime;
 
-  // flavor of multiplication
-  assign MULH   = (Funct3E == 3'b001);
-  assign MULHSU = (Funct3E == 3'b010);
+  assign PM = Am & Bm;
 
-  // Select partial products, handling signed multiplication
-  assign PP2E = {2'b00, (MULH | MULHSU) ? ~PA : PA, {(XLEN-1){1'b0}}};
-  assign PP3E = {2'b00, (MULH) ? ~PB : PB, {(XLEN-1){1'b0}}};
-  always_comb 
-  if (MULH)        PP4E = {1'b1, PP, {(XLEN-3){1'b0}}, 1'b1, {(XLEN){1'b0}}}; 
-  else if (MULHSU) PP4E = {1'b1, ~PP, {(XLEN-2){1'b0}}, 1'b1, {(XLEN-1){1'b0}}};
-  else             PP4E = {1'b0, PP, {(XLEN*2-2){1'b0}}};
-
-  //////////////////////////////
+  
+  always_comb begin
+    
+    case (Funct3E) 
+          3'b000:  begin                 // multiply
+            PP1E = {2'b00 ,Pprime}; 
+            PP2E = { {(2){1'b0}}, PA, {(XLEN-1){1'b0}}};
+            PP3E = { {(2){1'b0}}, PB, {(XLEN-1){1'b0}}};
+            PP4E = { 1'b0, PM, {(XLEN*2-2){1'b0}}};
+          end
+          3'b001:begin           // multiply high signed signed
+            PP1E = {2'b00 ,Pprime};  
+            PP2E = { 2'b00, ~PA, {(XLEN-1){1'b0}}};
+            PP3E = { 2'b00, ~PB, {(XLEN-1){1'b0}}};
+            PP4E = { 1'b1, PM, {(XLEN-3){1'b0}}, 1'b1, {(XLEN){1'b0}}}; 
+          end
+          3'b010:begin              // multiply high signed unsigned
+            PP1E = {2'b00 ,Pprime}; 
+            PP2E = { 2'b00, ~PA, {(XLEN-1){1'b0}}};
+            PP3E = { 2'b00, PB, {(XLEN-1){1'b0}}};
+            PP4E = {1'b1, ~PM, {(XLEN-2){1'b0}}, 1'b1, {(XLEN-1){1'b0}}};
+          end
+          3'b011:begin              // multiply high unsigned unsigned
+            PP1E = {2'b00 ,Pprime}; 
+            PP2E = { {(2){1'b0}}, PA, {(XLEN-1){1'b0}}};
+            PP3E = { {(2){1'b0}}, PB, {(XLEN-1){1'b0}}};
+            PP4E = { 1'b0, PM, {(XLEN*2-2){1'b0}}};
+          end
+          default: begin
+            PP1E = {(XLEN*2){1'b0}}; 
+            PP2E = {(XLEN*2){1'b0}}; 
+            PP3E = {(XLEN*2){1'b0}}; 
+            PP4E = {(XLEN*2){1'b0}}; 
+          end
+    endcase
+  end
   // Memory Stage: Sum partial proudcts
   //////////////////////////////
 

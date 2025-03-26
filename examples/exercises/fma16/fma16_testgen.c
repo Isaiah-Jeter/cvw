@@ -17,6 +17,10 @@ typedef union sp {
 // lists of tests, terminated with 0x8000
 uint16_t easyExponents[] = {15, 0x8000};
 uint16_t easyFracts[] = {0, 0x200, 0x8000}; // 1.0 and 1.1
+uint16_t medExponents[] = {8, 15, 20, 0x8000};
+uint16_t medFracts[] = {0, 0x200, 0x300, 0x345, 0x8000}; 
+uint16_t specialExponents[] = {25, 31, 0, 15, 20, 0x8000};
+uint16_t specialFracts[] = {0x300, 0, 0x399, 0x8000}; 
 
 void softfloatInit(void) {
     softfloat_roundingMode = softfloat_round_minMag; 
@@ -102,6 +106,69 @@ void prepTests(uint16_t *e, uint16_t *f, char *testName, char *desc, float16_t *
         }
 }
 
+void genAddTests(uint16_t *e, uint16_t *f, int sgn, char *testName, char *desc, int roundingMode, int zeroAllowed, int infAllowed, int nanAllowed) {
+    int i, j, k, numCases;
+    float16_t x, y, z;
+    float16_t cases[100000];
+    FILE *fptr;
+    char fn[80];
+ 
+    sprintf(fn, "work/%s.tv", testName);
+    if ((fptr = fopen(fn, "w")) == 0) {
+        printf("Error opening to write file %s.  Does directory exist?\n", fn);
+        exit(1);
+    }
+    prepTests(e, f, testName, desc, cases, fptr, &numCases);
+    y.v = 0x0001;
+    for (i=0; i < numCases; i++) { 
+        x.v = cases[i].v;
+        for (j=0; j<numCases; j++) {
+            z.v = cases[j].v;
+            for (k=0; k<=sgn; k++) {
+                z.v ^= (k<<15);
+                genCase(fptr, x, y, z, 0, 1, 0, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+            }
+        }
+    }
+    fclose(fptr);
+}
+
+
+
+
+void genMulAddTests(uint16_t *e, uint16_t *f, int sgn, char *testName, char *desc, int roundingMode, int zeroAllowed, int infAllowed, int nanAllowed) {
+    int i, j, k, c, numCases;
+    float16_t x, y, z;
+    float16_t cases[100000];
+    FILE *fptr;
+    char fn[80];
+ 
+    sprintf(fn, "work/%s.tv", testName);
+    if ((fptr = fopen(fn, "w")) == 0) {
+        printf("Error opening to write file %s.  Does directory exist?\n", fn);
+        exit(1);
+    }
+    prepTests(e, f, testName, desc, cases, fptr, &numCases);
+    for (i=0; i < numCases; i++) { 
+        x.v = cases[i].v;
+        for (j=0; j<numCases; j++) {
+            y.v = cases[j].v;
+            for(c=0; c<numCases; c++) {
+                z.v = cases[c].v;
+                if(sgn == 0) {
+                    genCase(fptr, x, y, z, 1, 1, 0, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                }
+                else{
+                    genCase(fptr, x, y, z, 1, 1, 1, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                    genCase(fptr, x, y, z, 1, 1, 0, 1, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                    genCase(fptr, x, y, z, 1, 1, 1, 1, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                }
+            }
+        }
+    }
+    fclose(fptr);
+}
+
 void genMulTests(uint16_t *e, uint16_t *f, int sgn, char *testName, char *desc, int roundingMode, int zeroAllowed, int infAllowed, int nanAllowed) {
     int i, j, k, numCases;
     float16_t x, y, z;
@@ -129,6 +196,67 @@ void genMulTests(uint16_t *e, uint16_t *f, int sgn, char *testName, char *desc, 
     fclose(fptr);
 }
 
+void fma_special(uint16_t *e, uint16_t *f, char *testName, char *desc, int roundingMode, int zeroAllowed, int infAllowed, int nanAllowed) {
+    int i, j, k, c, numCases;
+    float16_t x, y, z, copy;
+    float16_t cases[100000];
+    FILE *fptr;
+    char fn[80];
+ 
+    sprintf(fn, "work/%s.tv", testName);
+    if ((fptr = fopen(fn, "w")) == 0) {
+        printf("Error opening to write file %s.  Does directory exist?\n", fn);
+        exit(1);
+    }
+    prepTests(e, f, testName, desc, cases, fptr, &numCases);
+
+    //mul and add
+    for (i=0; i < numCases; i++) { 
+        x.v = cases[i].v;
+        for (j=0; j<numCases; j++) {
+            y.v = cases[j].v;
+            for(c=0; c<numCases; c++) {
+                z.v = cases[c].v;
+                    genCase(fptr, x, y, z, 1, 1, 0, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                    genCase(fptr, x, y, z, 1, 1, 1, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                    genCase(fptr, x, y, z, 1, 1, 0, 1, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+                    genCase(fptr, x, y, z, 1, 1, 1, 1, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+            }
+        }
+    }
+
+    //just multiply
+    prepTests(e, f, testName, desc, cases, fptr, &numCases);
+    copy=z;
+    z.v = 0x0000;
+    for (i=0; i < numCases; i++) { 
+        x.v = cases[i].v;
+        for (j=0; j<numCases; j++) {
+            y.v = cases[j].v;   
+            genCase(fptr, x, y, z, 1, 0, 0, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+            y.v ^= (k<<15); //change the sign
+            genCase(fptr, x, y, z, 1, 0, 0, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+        }
+    }
+
+    //just add
+    z=copy;
+    y.v = 0x0001;
+    for (i=0; i < numCases; i++) { 
+        x.v = cases[i].v;
+        for (j=0; j<numCases; j++) {
+            z.v = cases[j].v;
+            genCase(fptr, x, y, z, 0, 1, 0, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+            z.v ^= (k<<15);
+            genCase(fptr, x, y, z, 0, 1, 0, 0, roundingMode, zeroAllowed, infAllowed, nanAllowed);
+        }
+    }
+
+    
+
+    fclose(fptr);
+}
+
 int main()
 {
     if (system("mkdir -p work") != 0) exit(1); // create work directory if it doesn't exist
@@ -136,12 +264,27 @@ int main()
  
     // Test cases: multiplication
     genMulTests(easyExponents, easyFracts, 0, "fmul_0", "// Multiply with exponent of 0, significand of 1.0 and 1.1, RZ", 0, 0, 0, 0);
+    
 
 /*  // example of how to generate tests with a different rounding mode
     softfloat_roundingMode = softfloat_round_near_even; 
     genMulTests(easyExponents, easyFracts, 0, "fmul_0_rne", "// Multiply with exponent of 0, significand of 1.0 and 1.1, RNE", 1, 0, 0, 0); */
 
     // Add your cases here
-  
+    genMulTests(medExponents, medFracts, 0, "fmul_1", "// Multiply with exponent of -7:5, significand of 1.0 to 0x345, RZ", 0, 0, 0, 0);
+    genMulTests(medExponents, medFracts, 1, "fmul_2", "// Multiply with exponent of -7:5, significand of 1.0 to 0x345, RZ", 0, 0, 0, 0);
+
+    genAddTests(easyExponents, easyFracts, 0, "fadd_0", "// Add with exponent of 0, RZ", 0, 0, 0, 0);
+    genAddTests(medExponents, medFracts, 0, "fadd_1", "// Add with positive normalized numbers, RZ", 0, 0, 0, 0);
+    genAddTests(medExponents, medFracts, 1, "fadd_2", "// Add with signed normalized numbers, RZ", 0, 0, 0, 0);
+
+    genMulAddTests(easyExponents, easyFracts, 0, "fma_0", "// FMA with exponent of 0, RZ", 0, 0, 0, 0);
+    genMulAddTests(medExponents, medFracts, 0, "fma_1", "// FMA with positive normalized numbers, RZ", 0, 0, 0, 0);
+    genMulAddTests(medExponents, medFracts, 1, "fma_2", "// FMA with signed normalized numbers, RZ", 0, 0, 0, 0);
+    
+    fma_special(specialExponents, specialFracts, "fma_special_rz", "// Special Cases, positive, RZ", 0, 1, 1, 1);
+    fma_special(specialExponents, specialFracts, "fma_special_rne", "// Special Cases, positive, RNE", 1, 1, 1, 1);
+    fma_special(specialExponents, specialFracts, "fma_special_rp", "// Special Cases, positive, RP", 2, 1, 1, 1);
+    fma_special(specialExponents, specialFracts, "fma_special_rm", "// Special Cases, positive, RM", 3, 1, 1, 1);
     return 0;
 }

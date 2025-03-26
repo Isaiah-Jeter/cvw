@@ -1,0 +1,532 @@
+CRTE_SNAPSHOT_START
+
+SECTION_CRTE_VERSION
+3.0
+
+SECTION_PID
+3867036
+
+SECTION_POLLING_INTERVAL
+5
+
+SECTION_DATE_TIME
+Wed Mar 26 11:10:51 PDT 2025 (1743012651)
+
+SECTION_OS_VERSION
+osname: Linux
+hostname: chips.eng.hmc.edu
+arch: x86_64
+release_version: 5.14.0-503.23.1.el9_5.x86_64
+
+SECTION_IPC_INFO
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 360452     tsmith     600        1048576    2          dest         
+0x00000000 360453     tsmith     600        524288     2          dest         
+0x00000000 32776      ihottenrot 600        524288     2          dest         
+0x00000000 98314      ijeter     600        67108864   2          dest         
+0x00000000 12         ihottenrot 600        524288     2          dest         
+0x00000000 360461     tsmith     600        67108864   2          dest         
+0x00000000 131086     ihottenrot 600        524288     2          dest         
+0x00000000 15         ihottenrot 600        524288     2          dest         
+0x00000000 65552      ijeter     600        524288     2          dest         
+0x00000000 360467     mbellido   600        524288     2        SECTION_ULIMIT
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 600000
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 252264
+max locked memory           (kbytes, -l) 8192
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 524288
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 252264
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+
+SECTION_SYSCONF
+_SC_THREAD_SAFE_FUNCTIONS= 200809
+_SC_CLK_TCK= 100
+_SC_OPEN_MAX= 524288
+_SC_PAGE_SIZE= 4096
+_SC_ARG_MAX= 6291456
+_SC_CHILD_MAX= 252264
+_SC_LINE_MAX= 2048
+
+SECTION_FULL_COMMAND
+/cad/synopsys/SYN/linux64/syn/bin/common_shell_exec -64 -shell dc_shell -r /cad/synopsys/SYN -f scripts/synth.tcl
+
+SECTION_CPUINFO
+total_core: 32
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5377
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5423
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5444
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5245
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5429
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5406
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5354
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5462
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5313
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5313
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5215
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5156
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5266
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5250
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5246
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5267
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5461
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5431
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5362
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5451
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5414
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5410
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5457
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5430
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5188
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5258
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5217
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5245
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5222
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5198
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5276
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+model_name:  AMD Ryzen 9 7950X 16-Core Processor
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx51cpu_family: 25
+core_frequency_mhz: 5254
+core_per_socket: 0
+stepping: 2
+cache_size_kb: 1024
+ht: 0
+
+SECTION_OS_RELEASE_VERSION
+AlmaLinux release 9.5 (Teal Serval)
+
+
+SECTION_SYS/VM
+/proc/sys/vm/admin_reserve_kbytes:8192
+/proc/sys/vm/compact_unevictable_allowed:1
+/proc/sys/vm/compaction_proactiveness:20
+/proc/sys/vm/dirty_background_bytes:0
+/proc/sys/vm/dirty_background_ratio:10
+/proc/sys/vm/dirty_bytes:0
+/proc/sys/vm/dirty_expire_centisecs:3000
+/proc/sys/vm/dirty_ratio:20
+/proc/sys/vm/dirty_writeback_centisecs:500
+/proc/sys/vm/dirtytime_expire_seconds:43200
+/proc/sys/vm/extfrag_threshold:500
+/proc/sys/vm/hugetlb_optimize_vmemmap:0
+/proc/sys/vm/hugetlb_shm_group:0
+/proc/sys/vm/laptop_mode:0
+/proc/sys/vm/legacy_va_layout:0
+/proc/sys/vm/lowmem_reserve_ratio:256	256	32	0	0
+/proc/sys/vm/max_map_count:65530
+/proc/sys/vm/memfd_noexec:0
+/proc/sys/vm/memory_failure_early_kill:0
+/proc/sys/vm/memory_failure_recovery:1
+/proc/sys/vm/min_free_kbytes:67584
+/proc/sys/vm/min_slab_ratio:5
+/proc/sys/vm/min_unmapped_ratio:1
+/proc/sys/vm/mmap_min_addr:65536
+/proc/sys/vm/nr_hugepages:0
+/proc/sys/vm/nr_hugepages_mempolicy:0
+/proc/sys/vm/nr_overcommit_hugepages:0
+/proc/sys/vm/numa_stat:1
+/proc/sys/vm/numa_zonelist_order:Node
+/proc/sys/vm/oom_dump_tasks:1
+/proc/sys/vm/oom_kill_allocating_task:0
+/proc/sys/vm/overcommit_kbytes:0
+/proc/sys/vm/overcommit_memory:0
+/proc/sys/vm/overcommit_ratio:50
+/proc/sys/vm/page-cluster:3
+/proc/sys/vm/page_lock_unfairness:5
+/proc/sys/vm/panic_on_oom:0
+/proc/sys/vm/percpu_pagelist_high_fraction:0
+/proc/sys/vm/stat_interval:1
+/proc/sys/vm/swappiness:60
+/proc/sys/vm/unprivileged_userfaultfd:0
+/proc/sys/vm/user_reserve_kbytes:131072
+/proc/sys/vm/vfs_cache_pressure:100
+/proc/sys/vm/watermark_boost_factor:15000
+/proc/sys/vm/watermark_scale_factor:10
+/proc/sys/vm/zone_reclaim_mode:0
+
+
+SECTION_SWAP
+swap_partition: /dev/nvme0n1p3
+size_gb: 31
+
+CRTE_SNAPSHOT_END
+
+CRTE_PERIODIC_START 1 1743012651412
+
+SECTION_MPSTAT
+total_core: 32
+
+CPU     %user   %kernel %wait   %idle   
+all   2.205321 0.399777 0.037691 97.357208
+0     2.001347 0.684104 0.028207 97.286331
+1     0.935014 0.228196 0.030656 98.806137
+2     0.908544 0.210534 0.031225 98.849693
+3     1.195420 0.382275 0.035408 98.386894
+4     1.137688 0.162311 0.029026 98.670975
+5     1.211860 0.515377 0.081576 98.191185
+6     1.046178 0.224208 0.060063 98.669556
+7     0.968662 0.179951 0.038198 98.813187
+8     4.406885 1.053058 0.040001 94.500053
+9     1.924505 0.887244 0.043605 97.144646
+10     1.571094 0.220567 0.046489 98.161850
+11     1.678896 0.338921 0.046725 97.935455
+12     1.615750 0.238849 0.042327 98.103081
+13     1.504333 0.297199 0.046345 98.152122
+14     1.461104 0.200152 0.039687 98.299049
+15     1.282774 0.377824 0.041342 98.298058
+16     6.754715 1.503347 0.036596 91.705345
+17     4.908242 0.378189 0.027377 94.686195
+18     5.165536 1.406076 0.029256 93.399132
+19     1.368830 0.213393 0.025777 98.391998
+20     2.531591 0.161874 0.025486 97.281044
+21     1.605975 0.348448 0.031650 98.013931
+22     1.349119 0.183398 0.033427 98.434059
+23     2.419249 0.210105 0.029036 97.341614
+24     5.304546 0.448514 0.036137 94.210808
+25     2.266978 0.634645 0.034937 97.063438
+26     2.270779 0.164183 0.033478 97.531563
+27     1.650084 0.219993 0.035767 98.094162
+28     1.150135 0.173826 0.039038 98.637001
+29     1.497837 0.167194 0.034379 98.300591
+30     2.645279 0.165063 0.037988 97.151672
+31     2.831203 0.213833 0.034884 96.920074
+SECTION_LOADAVG
+3.29 3.16 3.09 4/2537 3867231
+
+SECTION_PID_STATUS
+name: common_shell_ex
+state: 1
+vmsize: 6447992
+vmrss: 369416
+vmdata: 5570820
+vmstk: 136
+vmexe: 337624
+vmlib: 129968
+threads: 33
+
+SECTION_PROCESS_CPU_UTIL
+pid: 3867036
+cpu_total_time: 6007501596
+cpu_used_time: 12108
+cpu_p: 
+
+SECTION_SYSTEM_CPU_UTIL
+sys_cpu_p: 
+
+SECTION_MEMINFO
+memtotal: 64665528
+memfree: 10399668
+cached: 37680588
+swapcached: 76272
+active: 5022752
+swaptotal: 32529404
+swapfree: 23370624
+
+SECTION_SMAPS
+shared_kb: 6972
+private_kb: 362840
+
+SECTION_DF
+Filesystem  Size  Used Avail Use%
+filesystem        905G  859G  0G    100
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          60383232  2272865 58110367   4294966729
+
+SECTION_CWD
+Filesystem  Size  Used Avail Use%
+filesystem        3666G  2706G  795G    77
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          244195328  7830984 236364344   4294967120
+
+SECTION_SWAP_RATE
+blk_read: 110774016
+blk_wrtn: 191767504
+swap_in_rate: 
+swap_out_rate: 
+swap_in_rate: 
+swap_out_rate: 
+
+SECTION_FD_SIZE
+files: 12
+total_size: 48409
+
+SECTION_NET_INTERFACE
+total_eth_avbl: 2
+
+name net_rx_err net_rx_drp net_tx_err net_tx_drp 
+    lo:         0        0        0        0
+enp6s0:         0        48677        0        0
+
+SECTION_NFSSTAT
+Error: Could not collect the data.
+
+SECTION_THREAD_CPU_UTIL
+3867036 : 3867036 (common_shell_ex) R 3867035 3867020 3854873 34828 3867020 0 38351 91024 0 6 110 19 320 39 20 0 33 0 187762549 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 64 67108864 1132494591 0 0 0 17 6 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867066 : 3867066 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 1 91024 0 6 0 0 320 39 20 0 33 0 187762561 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 2147221247 67108864 1132494591 1 0 0 -1 6 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867108 : 3867108 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 2 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 27 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867110 : 3867110 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 4 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867111 : 3867111 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 31 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867112 : 3867112 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 26 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867113 : 3867113 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 12 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867114 : 3867114 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 21 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867115 : 3867115 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 27 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867116 : 3867116 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 18 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867117 : 3867117 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 13 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867118 : 3867118 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 17 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867119 : 3867119 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 30 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867120 : 3867120 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 1 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 4 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867121 : 3867121 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 15 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867122 : 3867122 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 25 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867123 : 3867123 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 6 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867124 : 3867124 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 29 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867125 : 3867125 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 3 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867126 : 3867126 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 28 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867127 : 3867127 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 2 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 7 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867128 : 3867128 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 10 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867129 : 3867129 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 2 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 18 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867130 : 3867130 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 11 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867131 : 3867131 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 3 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 1 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867132 : 3867132 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 14 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867134 : 3867134 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 6 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867135 : 3867135 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 24 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867136 : 3867136 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 2 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 5 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867137 : 3867137 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 5 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 0 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867138 : 3867138 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 1 4 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 20 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867139 : 3867139 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 2 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 4 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+3867140 : 3867140 (common_shell_ex) S 3867035 3867020 3854873 34828 3867020 64 0 91024 0 6 0 2 320 39 20 0 33 0 187762676 6602743808 92354 18446744073709551615 101089280 446813904 140737488342352 0 0 0 8192 67108864 1132494591 1 0 0 -1 2 0 0 0 0 0 448318848 498794312 1878986752 140737488343667 140737488343781 140737488343781 140737488351158 0
+
+CRTE_PERIODIC_END 1 1743012651412
